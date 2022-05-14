@@ -1,0 +1,97 @@
+.team{
+    background-color: $background-color-light;
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.team__title{
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: $secondary-text-color;
+
+    margin-bottom: 50px;
+}
+
+
+.team__list{
+    @extend %list;
+    display: flex;
+}
+
+.team__item:not(:last-child){
+    margin-right: 30px;
+}
+
+.team__item{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__card{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.team__agent-name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19x;
+    color: $secondary-text-color;
+    margin-bottom: 10px;
+}
+
+.team__agent-position{
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+}
+
+.networks{
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-right: 32px;
+    padding-left: 32px; 
+}
+
+.networks__link{
+    @extend %link;
+}
+
+.networks__icon{
+    fill: #AFB1B8;
+    margin: 12px;
+
+    transition: fill  $transition-duration $transition-timing-function;
+}
+
+.networks__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background-color  $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus{
+    background-color: $background-color-accent;
+
+    &:hover .networks__icon{
+        fill: $text-color-button;
+    }
+    
+    &:focus .networks__icon{
+        fill: $text-color-button;
+    }
+    
+    }
+}
